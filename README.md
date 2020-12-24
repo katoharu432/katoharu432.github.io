@@ -1,2 +1,9 @@
-# katoharu432.github.io
-なんか書く
+# サイトです。
+
+[harukakato.com](https://harukakato.com)
+
+## License
+
+### ソースコード類
+
+[MIT](LICENSE)
