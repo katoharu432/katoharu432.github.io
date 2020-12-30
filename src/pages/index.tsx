@@ -23,9 +23,7 @@ export default function Home({
       <section className={utilStyles.headingMd}>
         <p>自己紹介を書くところ</p>
         <p>
-          npx create-next-app nextjs-blog --use-npm --example
-          "https://github.com/vercel/next-learn-starter/tree/master/basics-final"
-          したら出てきたやつをいじっただけ
+            近々ちゃんとつくります
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
