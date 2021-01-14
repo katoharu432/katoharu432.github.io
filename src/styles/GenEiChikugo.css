@@ -1,0 +1,8 @@
+@font-face {
+    font-family:'源暎ちくご明朝 v2';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../lib/GenEiChikuMinv2/GenEiChikugoMin2R.woff') format('woff'),
+    url('../lib/GenEiChikuMinv2/GenEiChikugoMin2R.ttf') format('truetype');
+  }
