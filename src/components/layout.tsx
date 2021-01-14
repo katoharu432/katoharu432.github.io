@@ -2,9 +2,12 @@ import Head from 'next/head'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
-
-const name = 'Kato Haruka'
-export const siteTitle = 'かとうが何かを書きます'
+import {
+  SITE_TITLE,
+  AUTHOR_NAME,
+  SITE_URL,
+  SITE_DESCRIPTION,
+} from '../lib/constants'
 
 export default function Layout({
   children,
@@ -16,16 +19,18 @@ export default function Layout({
   return (
     <div className={styles.container}>
       <Head>
-        <link rel="icon" href="/favicon.svg" />
-        <meta name="description" content="無" />
-        <meta
-          property="og:image"
-          content={`https://og-image.now.sh/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700&display=swap&subset=japanese"
         />
-        <meta name="og:title" content={siteTitle} />
+        <link rel="icon" href="/favicon.svg" />
+        <meta name="description" content={SITE_DESCRIPTION} />
+        <meta name="og:title" content={SITE_TITLE} />
+        <meta property="og:image" content={`${SITE_URL}/images/og.png`} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@katoharu432" />
+        <meta name="twitter:creator" content="@katoharu432" />
+        <meta property="og:site_name" content={SITE_TITLE} />
       </Head>
       <header className={styles.header}>
         {home ? (
@@ -33,9 +38,9 @@ export default function Layout({
             <img
               src="/images/profile.png"
               className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
+              alt={AUTHOR_NAME}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={utilStyles.heading2Xl}>{AUTHOR_NAME}</h1>
           </>
         ) : (
           <>
@@ -44,13 +49,13 @@ export default function Layout({
                 <img
                   src="/images/profile.png"
                   className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
+                  alt={AUTHOR_NAME}
                 />
               </a>
             </Link>
             <h2 className={utilStyles.headingLg}>
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+                <a className={utilStyles.colorInherit}>{AUTHOR_NAME}</a>
               </Link>
             </h2>
           </>
