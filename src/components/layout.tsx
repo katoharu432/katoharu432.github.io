@@ -16,7 +16,7 @@ export default function Layout({
   return (
     <div className={styles.container}>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" />
         <meta name="description" content="無" />
         <meta
           property="og:image"
@@ -31,7 +31,7 @@ export default function Layout({
         {home ? (
           <>
             <img
-              src="/images/profile.jpg"
+              src="/images/profile.png"
               className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
               alt={name}
             />
@@ -42,7 +42,7 @@ export default function Layout({
             <Link href="/">
               <a>
                 <img
-                  src="/images/profile.jpg"
+                  src="/images/profile.png"
                   className={`${styles.headerImage} ${utilStyles.borderCircle}`}
                   alt={name}
                 />
