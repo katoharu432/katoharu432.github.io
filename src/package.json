@@ -9,16 +9,19 @@
     "postbuild": "cp -a out/. ../build"
   },
   "dependencies": {
+    "autoprefixer": "^10.2.1",
     "date-fns": "^2.11.1",
     "gray-matter": "^4.0.2",
-    "next": "^10.0.0",
+    "next": "^10.0.5",
+    "postcss": "^8.2.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "remark": "^12.0.0",
-    "remark-html": "^12.0.0"
+    "remark-html": "^12.0.0",
+    "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
-    "@types/node": "^14.14.16",
+    "@types/node": "^14.14.20",
     "@types/react": "^17.0.0",
     "prettier": "^2.2.1",
     "typescript": "^4.1.3"

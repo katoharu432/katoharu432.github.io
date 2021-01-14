@@ -1,26 +1,17 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Noto Serif JP', serif;
-  line-height: 1.6;
-  font-size: 18px;
+@tailwind base;
+
+@media (min-width: 640px) {
+  html {
+    font-size: 18px;
+  }
+}
+html {
+  background-color: #fdf6e3;
+  color: #586e75;
+}
+::selection {
+  background: #eee8d5;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
+@tailwind components;
+@tailwind utilities;

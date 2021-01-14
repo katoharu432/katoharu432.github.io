@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
+
 import Link from 'next/link'
 import {
   SITE_TITLE,
@@ -17,12 +16,8 @@ export default function Layout({
   home?: boolean
 }) {
   return (
-    <div className={styles.container}>
+    <div className="max-w-xl mx-auto px-4 pt-8 pb-16">
       <Head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700&display=swap&subset=japanese"
-        />
         <link rel="icon" href="/favicon.svg" />
         <meta name="description" content={SITE_DESCRIPTION} />
         <meta name="og:title" content={SITE_TITLE} />
@@ -32,15 +27,15 @@ export default function Layout({
         <meta name="twitter:creator" content="@katoharu432" />
         <meta property="og:site_name" content={SITE_TITLE} />
       </Head>
-      <header className={styles.header}>
+      <header className='flex flex-col items-center'>
         {home ? (
           <>
             <img
               src="/images/profile.png"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+              className='w-32 h-32 rounded-full'
               alt={AUTHOR_NAME}
             />
-            <h1 className={utilStyles.heading2Xl}>{AUTHOR_NAME}</h1>
+            <h1 className=' text-4xl leading-relaxed font-bold m-6'>{AUTHOR_NAME}</h1>
           </>
         ) : (
           <>
@@ -48,14 +43,14 @@ export default function Layout({
               <a>
                 <img
                   src="/images/profile.png"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+                  className='w-24 h-24 rounded-full'
                   alt={AUTHOR_NAME}
                 />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
+            <h2 className=' text-2xl m-4'>
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{AUTHOR_NAME}</a>
+                <a className=' text-current'>{AUTHOR_NAME}</a>
               </Link>
             </h2>
           </>
@@ -63,9 +58,9 @@ export default function Layout({
       </header>
       <main>{children}</main>
       {!home && (
-        <div className={styles.backToHome}>
+        <div className=' m-12 mb-0 ml-0'>
           <Link href="/">
-            <a>← Back to home</a>
+            <a> ← home </a>
           </Link>
         </div>
       )}
